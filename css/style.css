@@ -406,6 +406,27 @@ span{
     color: #333;
 }
 /* --------- */
+.more-projects {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.more-projects .btn {
+  background: var(--main-color);
+  color: var(--white-color);
+  font-weight: 600;
+  border-radius: .6rem;
+  padding: 1rem 2.5rem;
+  transition: .3s ease;
+}
+
+.more-projects .btn:hover {
+  background: transparent;
+  color: var(--main-color);
+  border: .2rem solid var(--main-color);
+}
+
+/* --------- */
 
 .contact-container{
     display: flex;
