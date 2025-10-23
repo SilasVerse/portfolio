@@ -1,10 +1,12 @@
 # Portfolio Website
-Welcome to my portfolio website repository! This website showcases my skills, projects, and experiences.
+ This website showcases my skills, projects, and experiences.
 
 ## Tech Stack
 - **Frontend**: HTML, CSS, JavaScript
 - **Hosting**: GitHub Pages
 
+## 👋  Live Demo
+[Responsive personal website](https://SilasVerse.github.io/portfolio) 
 
 ## Folder Structure
 ```
@@ -18,8 +20,8 @@ portfolio/
 ├── assets/           # Images and other assets
 └── README.md         # Project documentation
 ```
-I made this website based on my learning from various sources including youtube videos, and documents.
-In the future, I will add more features in my page and try to do more projects. 
-I'm still learning to improve skills.
+I made this based on my learning from various sources like youtube, and documents.
+In the future, I will add more features in my page and try to implement more projects. 
+Now, I'm still learning to improve skills.
 
 ---
