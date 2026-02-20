@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Personal Porfolio</title>
-    
+    <title>Silas· dev portfolio</title>
+
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
+        <a href="#" class="logo">Silas.</a>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
@@ -20,206 +20,118 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
-
-        <div class="bx bx-moon" id="darkMode-icon"> </div>
+        <i class="bx bx-moon" id="darkMode-icon"></i>
     </header>
 
+    <!-- home section -->
     <section class="home" id="home">
         <div class="home-content">
-            <h1>H.L.(Silas)</h1>
-            <p>A passionate and driven individual with a strong interest in technology and innovation.</p>
-            <p>Always eager to explore new technologies, and collaborate on projects that push boundaries.</p>
-            
+            <h1>Silas</h1>
+            <p>Passionate builder who turns complex ideas into clean, impactful solutions. Always exploring the edge of tech & automation.</p>
             <div class="social-media">
                 <a href="#"><i class="bx bxl-facebook"></i></a>
                 <a href="#"><i class="bx bxl-twitter"></i></a>
                 <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="#"><i class="bx bxl-github"></i></a>
             </div>
-
             <a href="#" class="btn">Download CV</a>
         </div>
         <div class="profession-container">
-            <div class="profession-box">
-                <div class="circle">
-                    <img src="images/profile.jpg" alt="">
-                </div>
+            <div class="circle">
+                <img src="images/profile.jpg" alt="profile">
             </div>
-
-            <div class="overlay"></div>
         </div>
-
-        <div class="home-img"></div>
     </section>
 
-    <!--about section design -->
-     <section class="about" id="about">
+    <!-- about -->
+    <section class="about" id="about">
         <div class="about-content">
-            <h2 class="heading">About<span>Me</span></h2>
-            <!-- <h3>Hi, I'm here to help your next project! </h3> -->
-            <p style="text-indent: 2em;">Hello! I'm Silas, a passionate and driven individual with a strong interest in technology and innovation. 
-                I thrive on solving complex problems and turning ideas into impactful solutions.</p>
-            <p style="text-indent: 2em;"> With experience in software development, data analysis, and automation, I enjoy working on projects that challenge my creativity and technical skills.
-                I’m always eager to explore new technologies, refine my skills, and collaborate on projects that push boundaries. </p>
-            <a href="#" class="btn">Read More</a>
-        </div> 
-        
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Hi, I'm here to help your next project!</h3>
+            <p>Hello! I'm Silas — I thrive on solving complex problems and turning ideas into impactful solutions. With hands-on experience in software development, data analysis, and automation, I enjoy projects that challenge both creativity and logic.</p>
+            <p>I’m constantly learning and love collaborating with others to push boundaries. Whether it's crafting a smooth UI or automating a data pipeline, I bring curiosity and attention to detail.</p>
+            <a href="#" class="btn">Read more</a>
+        </div>
         <div class="skills">
-            <!-- <h3>My Skills</h3> -->
-            <div class="skill">
-                <label>Python</label>
-                <div class="bar-container">
-                    <div class="skill-bar" style="width: 83%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <label>HTML+CSS</label>
-                <div class="bar-container">
-                    <div class="skill-bar" style="width: 78%;"></div>
-                </div>
-            </div>
-            <!-- <div class="skill">
-                <label>CSS</label>
-                <div class="bar-container">
-                    <div class="skill-bar" style="width: 70%;"></div>
-                </div>
-            </div> -->
-            <div class="skill">
-                <label>Javascript</label>
-                <div class="bar-container">
-                    <div class="skill-bar" style="width: 65%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <label>SQL(MySQL+Oracle)</label>
-                <div class="bar-container">
-                    <div class="skill-bar" style="width: 80%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <label>PHP</label>
-                <div class="bar-container">
-                    <div class="skill-bar" style="width: 55%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <label>Java</label>
-                <div class="bar-container">
-                    <div class="skill-bar" style="width: 43%;"></div>
-                </div>
-            </div>
-            <div class="skill">
-                <label>Legacy(COBOL&RPG)</label>
-                <div class="bar-container">
-                    <div class="skill-bar" style="width: 33%;"></div>
-                </div>
-            </div>
+            <div class="skill"><label>Python</label><div class="bar-container"><div class="skill-bar" style="width:80%"></div></div></div>
+            <div class="skill"><label>HTML/CSS</label><div class="bar-container"><div class="skill-bar" style="width:80%"></div></div></div>
+            <div class="skill"><label>JavaScript</label><div class="bar-container"><div class="skill-bar" style="width:65%"></div></div></div>
+            <div class="skill"><label>PHP</label><div class="bar-container"><div class="skill-bar" style="width:50%"></div></div></div>
+            <div class="skill"><label>SQL</label><div class="bar-container"><div class="skill-bar" style="width:75%"></div></div></div>
+            <div class="skill"><label>Java</label><div class="bar-container"><div class="skill-bar" style="width:60%"></div></div></div>
         </div>
-     </section>
+    </section>
 
-     <!-- certificates -->
-     <!-- <section class="certificates" id="certificates">
-        <h2 class="heading">My<span>Certificates</span></h2>
-     
+    <!-- certificates -->
+    <section class="certificates" id="certificates">
+        <h2 class="heading">My <span>Certificates</span></h2>
         <div class="certificates-img">
-            <img src="images/JLPT.jpg" alt="">
-            <img src="images/IP.jpg" alt="">
-            <img src="images/FE.jpg" alt="">
+            <img src="https://picsum.photos/id/20/400/300" alt="JLPT">
+            <img src="https://picsum.photos/id/26/400/300" alt="IP">
+            <img src="https://picsum.photos/id/28/400/300" alt="FE">
         </div>
-    </section> -->
-    
-    <!-- portfolio -->
+    </section>
+
+    <!-- projects -->
     <section class="projects" id="projects">
         <h2 class="heading">Latest <span>Projects</span></h2>
-
         <div class="projects-container">
             <div class="projects-box">
-                <img src="images/Aqua.jpg" alt="">
-
-                <div class="projects-layer">
-                    <h4>Aquatopia</h4>
-                    <p>A graphical simulation of fish movements in a dynamic underwater environment using OpenGL.</p>
-                    <a href="https://github.com/SilasVerse/Aquatopia"><i class="bx bx-link-external"></i></a>
-                </div>
+                <img src="images/Aqua.jpg" alt="Aquatopia">
+                <div class="projects-layer"><h4>Aquatopia</h4><p>OpenGL fish simulation with dynamic underwater motion.</p><a href="https://github.com/SilasVerse/Aquatopia"><i class="bx bx-link-external"></i></a></div>
             </div>
             <div class="projects-box">
-                <img src="images/BGR.jpg" alt="">
-
-                <div class="projects-layer">
-                    <h4>Background Remover</h4>
-                    <p>Remove background and detect objects in images using OpenCV.</p>
-                    <a href="https://github.com/SilasVerse/BGR"><i class="bx bx-link-external"></i></a>
-                </div>
+                <img src="images/BGR.jpg" alt="Background Remover">
+                <div class="projects-layer"><h4>Bg Remover</h4><p>Remove & detect objects using OpenCV.</p><a href="https://github.com/SilasVerse/BGR"><i class="bx bx-link-external"></i></a></div>
             </div>
             <div class="projects-box">
-                <img src="images/Car-sideview.jpg" alt="">
-
-                <div class="projects-layer">
-                    <h4>Automatic Automobile Analysis</h4>
-                    <p>RPA project to extract data from car websites, visualize insights, and automate report generation. </p>
-                    <a href="https://github.com/SilasVerse/AAA-Automated-Automobile-Analysis"><i class="bx bx-link-external"></i></a>
-                </div>
+                <img src="images/Car-sideview.jpg" alt="Auto Analysis">
+                <div class="projects-layer"><h4>Automobile Analysis</h4><p>RPA data extraction + visualization.</p><a href="https://github.com/SilasVerse/AAA-Automated-Automobile-Analysis"><i class="bx bx-link-external"></i></a></div>
             </div>
             <div class="projects-box">
-                <img src="images/file_scanner.jpg" alt="">
-
-                <div class="projects-layer">
-                    <h4>Malware Detection</h4>
-                    <p>Detect malware in files and generate report.</p>
-                    <a href="https://github.com/SilasVerse/File-Malware-Scanner"><i class="bx bx-link-external"></i></a>
-                </div>
+                <img src="https://picsum.photos/id/99/500/350" alt="Payroll System">
+                <div class="projects-layer"><h4>Payroll System</h4><p>Automated payroll processing with tax calculations.</p><a href="#"><i class="bx bx-link-external"></i></a></div>
             </div>
             <div class="projects-box">
-                <img src="images/tweet.jpg" alt="">
-
-                <div class="projects-layer">
-                    <h4>Twitter Sentiment Analysis</h4>
-                    <p>Analyzed tweets to classify sentiment (positive, negative, neutral) using NLP techniques.</p>
-                    <a href="#"><i class="https://github.com/SilasVerse/Twitter-Sentiment-Analysis-Upgrade"></i></a>
-                </div>
+                <img src="images/tweet.jpg" alt="Twitter sentiment">
+                <div class="projects-layer"><h4>Sentiment Analysis</h4><p>NLP tweet classification.</p><a href="https://github.com/SilasVerse/Twitter-Sentiment-Analysis-Upgrade"><i class="bx bx-link-external"></i></a></div>
             </div>
             <div class="projects-box">
-                <img src="images/Library.jpg" alt="">
-
-                <div class="projects-layer">
-                    <h4>Library Management System</h4>
-                    <p>A simple Library Management Project but with an old legacy language, COBOL.</p>
-                    <a href="https://github.com/SilasVerse/LibraryManagementSystem"><i class="bx bx-link-external"></i></a>
-                </div>
+                <img src="images/Library.jpg" alt="Library Management">
+                <div class="projects-layer"><h4>Library Management System</h4><p>A simple LMS, but with old legacy language.</p><a href="https://github.com/SilasVerse/LibraryManagementSystem"><i class="bx bx-link-external"></i></a></div>
             </div>
-            <!-- <div class="projects-box">
-                <img src="" alt="">
-
-                <div class="projects-layer">
-                    <h4>+</h4>
-                </div>
-            </div> -->
-        </div>
-        
-        <div class="more-projects">
-            <a href="https://github.com/SilasVerse?tab=repositories" target="_blank" class="btn">More →</a>
+            <div class="projects-box">
+                <img src="images/file_scanner.jpg" alt="Malware Detection">
+                <div class="projects-layer"><h4>Malware Scanner</h4><p>Detect threats & generate PDF reports.</p><a href="https://github.com/SilasVerse/File-Malware-Scanner"><i class="bx bx-link-external"></i></a></div>
+            </div>
+            <div class="projects-box">
+                <img src="https://picsum.photos/id/99/500/350" alt="Twitter sentiment">
+                <div class="projects-layer"><h4>Myanllama</h4><p>A chatbot that understands Myanglish.</p><a href="https://github.com/SilasVerse/Myanllama"><i class="bx bx-link-external"></i></a></div>
+            </div>            
+            <div class="projects-box">
+                <img src="https://picsum.photos/id/48/500/350" alt="more">
+                <div class="projects-layer"><h4>+ new project</h4><p>Coming soon</p><a href="#"><i class="bx bx-plus"></i></a></div>
+            </div>
         </div>
     </section>
 
-    <!-- contact design -->
+    <!-- contact -->
     <section class="contact" id="contact">
         <div class="contact-container">
-            <h2 class="heading">Contact <span>Me!</span></h2>
-    
+            <h2 class="heading">Contact <span>Me</span></h2>
             <div class="contact-wrapper">
-                <div class="contact-box">
-                    <div class="contact-content">
-                        <div class="contact-slide">
-                            <h4> Phone - 09 *** *** ***</h4>
-                            <h4> Email - silasanderson.rpce@gmail.com</h4>
-                            <h4> Github - <a href="https://github.com/SilasVerse" target="_blank">SilasVerse</a></h4>
-                        </div>
-                    </div>
+                <div class="contact-slide">
+                    <h4><i class="bx bx-phone"></i> +95 9 *** *** ***</h4>
+                    <h4><i class="bx bx-envelope"></i> silasanderson.rpce@gmail.com</h4>
+                    <h4><i class="bx bxl-github"></i> github.com/SilasVerse</h4>
                 </div>
             </div>
         </div>
-        
     </section>
-    
+
+    <footer class="footer">
+        <p>© 2025 Silas – built with curiosity</p>
+    </footer>
     <script src="js/script.js"></script>
 </body>
 </html>
