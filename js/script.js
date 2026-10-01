@@ -2,6 +2,12 @@
   'use strict';
 
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement;
+
+  /* ── Enable reveal animations only when JS is confirmed running ── */
+  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+    root.classList.add('js-reveal-ready');
+  }
 
   /* ── Scroll progress bar ── */
   (function () {
@@ -35,12 +41,15 @@
     });
   })();
 
-  /* ── Sticky mini-CTA show/hide based on hero visibility ── */
+  /* ── Sticky mini-CTA ── */
   (function () {
     var mini = document.getElementById('miniCta');
     var hero = document.querySelector('.hero');
     if (!mini || !hero) return;
-    if (!('IntersectionObserver' in window)) return;
+    if (!('IntersectionObserver' in window)) {
+      mini.classList.add('visible');
+      return;
+    }
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting) {
@@ -107,7 +116,7 @@
     updateActive();
   })();
 
-  /* ── Animate skill bars when they scroll into view ── */
+  /* ── Skill bars ── */
   (function () {
     var bars = document.querySelectorAll('.skill-bar-mini span, .skill-bar');
     if (!bars.length) return;
@@ -128,12 +137,32 @@
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
     bars.forEach(function (b) { io.observe(b); });
+
+    /* Fallback: if still not filled after 2s, fill all */
+    setTimeout(function () {
+      bars.forEach(function (b) {
+        if (!b.style.width || b.style.width === '0%') fill(b);
+      });
+    }, 2000);
   })();
 
-  /* ── Scroll reveal + stagger ── */
-  if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+  /* ── Scroll reveal + stagger (robust) ── */
+  (function () {
+    var revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-scale');
+    var staggerEls = document.querySelectorAll('.stagger');
+
+    function showAll() {
+      revealEls.forEach(function (el) { el.classList.add('in'); });
+      staggerEls.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      showAll();
+      return;
+    }
+
     var revealIO = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
@@ -141,11 +170,9 @@
           revealIO.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-scale').forEach(function (el) {
-      revealIO.observe(el);
-    });
+    revealEls.forEach(function (el) { revealIO.observe(el); });
 
     var staggerIO = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -154,11 +181,19 @@
           staggerIO.unobserve(e.target);
         }
       });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.stagger').forEach(function (el) { staggerIO.observe(el); });
-  } else {
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-scale, .stagger').forEach(function (el) {
-      el.classList.add('in');
-    });
-  }
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+
+    staggerEls.forEach(function (el) { staggerIO.observe(el); });
+
+    /* Safety net: reveal everything that's still hidden after 2.5s */
+    setTimeout(function () {
+      revealEls.forEach(function (el) {
+        if (!el.classList.contains('in')) el.classList.add('in');
+      });
+      staggerEls.forEach(function (el) {
+        if (!el.classList.contains('in')) el.classList.add('in');
+      });
+    }, 2500);
+  })();
+
 })();
