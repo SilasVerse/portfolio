@@ -793,7 +793,50 @@ footer { border-top: 1px solid var(--border); padding: 44px 0 36px; background: 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .reveal, .reveal-left, .reveal-scale, .stagger > * { opacity: 1; transform: none; }
+  /* ── Scroll reveal animations (safe default = visible) ── */
+.reveal,
+.reveal-left,
+.reveal-scale,
+.stagger > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* Only hide them if JS adds the .js-reveal-ready class to <html> */
+html.js-reveal-ready .reveal,
+html.js-reveal-ready .reveal-left,
+html.js-reveal-ready .reveal-scale,
+html.js-reveal-ready .stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1);
+}
+
+html.js-reveal-ready .reveal-left { transform: translateX(-40px); }
+html.js-reveal-ready .reveal-scale { transform: scale(.9); }
+
+html.js-reveal-ready .reveal.in,
+html.js-reveal-ready .reveal-left.in,
+html.js-reveal-ready .reveal-scale.in,
+html.js-reveal-ready .stagger.in > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger delays only apply once JS is ready */
+html.js-reveal-ready .stagger.in > *:nth-child(1) { transition-delay: .05s; }
+html.js-reveal-ready .stagger.in > *:nth-child(2) { transition-delay: .1s; }
+html.js-reveal-ready .stagger.in > *:nth-child(3) { transition-delay: .15s; }
+html.js-reveal-ready .stagger.in > *:nth-child(4) { transition-delay: .2s; }
+html.js-reveal-ready .stagger.in > *:nth-child(5) { transition-delay: .25s; }
+html.js-reveal-ready .stagger.in > *:nth-child(6) { transition-delay: .3s; }
+html.js-reveal-ready .stagger.in > *:nth-child(7) { transition-delay: .35s; }
+html.js-reveal-ready .stagger.in > *:nth-child(8) { transition-delay: .4s; }
+html.js-reveal-ready .stagger.in > *:nth-child(9) { transition-delay: .45s; }
+html.js-reveal-ready .stagger.in > *:nth-child(10) { transition-delay: .5s; }
+html.js-reveal-ready .stagger.in > *:nth-child(11) { transition-delay: .55s; }
+html.js-reveal-ready .stagger.in > *:nth-child(12) { transition-delay: .6s; }
+  
   .skill-card .skill-bar-mini span { width: var(--w, 0%) !important; }
 }
 
