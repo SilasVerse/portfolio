@@ -1,137 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silas· dev portfolio</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Silas — developer portfolio. Software development, data analysis, automation, and AI projects.">
+<title>Silas — Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header class="header">
-        <a href="#" class="logo">Silas.</a>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#certificates">Certificates</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <i class="bx bx-moon" id="darkMode-icon"></i>
-    </header>
+<body class="dark-mode">
 
-    <!-- home section -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Silas</h1>
-            <p>Passionate builder who turns complex ideas into clean, impactful solutions. Always exploring the edge of tech & automation.</p>
-            <div class="social-media">
-                <a href="#"><i class="bx bxl-facebook"></i></a>
-                <a href="#"><i class="bx bxl-twitter"></i></a>
-                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
-                <a href="#"><i class="bx bxl-github"></i></a>
-            </div>
-            <a href="#" class="btn">Download CV</a>
-        </div>
-        <div class="profession-container">
-            <div class="circle">
-                <img src="images/profile.jpg" alt="profile">
-            </div>
-        </div>
-    </section>
+<!-- Scroll progress -->
+<div class="progress-bar"><span id="progressBar"></span></div>
 
-    <!-- about -->
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Hi, I'm here to help your next project!</h3>
-            <p>Hello! I'm Silas — I thrive on solving complex problems and turning ideas into impactful solutions. With hands-on experience in software development, data analysis, and automation, I enjoy projects that challenge both creativity and logic.</p>
-            <p>I’m constantly learning and love collaborating with others to push boundaries. Whether it's crafting a smooth UI or automating a data pipeline, I bring curiosity and attention to detail.</p>
-            <a href="#" class="btn">Read more</a>
-        </div>
-        <div class="skills">
-            <div class="skill"><label>Python</label><div class="bar-container"><div class="skill-bar" style="width:80%"></div></div></div>
-            <div class="skill"><label>HTML/CSS</label><div class="bar-container"><div class="skill-bar" style="width:80%"></div></div></div>
-            <div class="skill"><label>JavaScript</label><div class="bar-container"><div class="skill-bar" style="width:65%"></div></div></div>
-            <div class="skill"><label>PHP</label><div class="bar-container"><div class="skill-bar" style="width:50%"></div></div></div>
-            <div class="skill"><label>SQL</label><div class="bar-container"><div class="skill-bar" style="width:75%"></div></div></div>
-            <div class="skill"><label>Java</label><div class="bar-container"><div class="skill-bar" style="width:60%"></div></div></div>
-        </div>
-    </section>
+<!-- ───────────── Nav ───────────── -->
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <div class="logo-lockup">
+      <span class="logo-mark">S</span>
+      <div>
+        <span class="name">Silas.</span>
+        <span class="by">Developer portfolio</span>
+      </div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <i class="bx bx-sun" id="themeIcon"></i>
+    </button>
+    <a class="btn btn-secondary" href="#contact">Get in touch</a>
+    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+    </button>
+  </div>
+</nav>
 
-    <!-- certificates -->
-    <section class="certificates" id="certificates">
-        <h2 class="heading">My <span>Certificates</span></h2>
-        <div class="certificates-img">
-            <img src="https://picsum.photos/id/20/400/300" alt="JLPT">
-            <img src="https://picsum.photos/id/26/400/300" alt="IP">
-            <img src="https://picsum.photos/id/28/400/300" alt="FE">
-        </div>
-    </section>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#home" class="active">Home</a>
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <a class="btn btn-primary" href="#contact">Get in touch</a>
+</div>
 
-    <!-- projects -->
-    <section class="projects" id="projects">
-        <h2 class="heading">Latest <span>Projects</span></h2>
-        <div class="projects-container">
-            <div class="projects-box">
-                <img src="images/Aqua.jpg" alt="Aquatopia">
-                <div class="projects-layer"><h4>Aquatopia</h4><p>OpenGL fish simulation with dynamic underwater motion.</p><a href="https://github.com/SilasVerse/Aquatopia"><i class="bx bx-link-external"></i></a></div>
-            </div>
-            <div class="projects-box">
-                <img src="images/BGR.jpg" alt="Background Remover">
-                <div class="projects-layer"><h4>Bg Remover</h4><p>Remove & detect objects using OpenCV.</p><a href="https://github.com/SilasVerse/BGR"><i class="bx bx-link-external"></i></a></div>
-            </div>
-            <div class="projects-box">
-                <img src="images/Car-sideview.jpg" alt="Auto Analysis">
-                <div class="projects-layer"><h4>Automobile Analysis</h4><p>RPA data extraction + visualization.</p><a href="https://github.com/SilasVerse/AAA-Automated-Automobile-Analysis"><i class="bx bx-link-external"></i></a></div>
-            </div>
-            <div class="projects-box">
-                <img src="https://picsum.photos/id/99/500/350" alt="Payroll System">
-                <div class="projects-layer"><h4>Payroll System</h4><p>Automated payroll processing with tax calculations.</p><a href="#"><i class="bx bx-link-external"></i></a></div>
-            </div>
-            <div class="projects-box">
-                <img src="images/tweet.jpg" alt="Twitter sentiment">
-                <div class="projects-layer"><h4>Sentiment Analysis</h4><p>NLP tweet classification.</p><a href="https://github.com/SilasVerse/Twitter-Sentiment-Analysis-Upgrade"><i class="bx bx-link-external"></i></a></div>
-            </div>
-            <div class="projects-box">
-                <img src="images/Library.jpg" alt="Library Management">
-                <div class="projects-layer"><h4>Library Management System</h4><p>A simple LMS, but with old legacy language.</p><a href="https://github.com/SilasVerse/LibraryManagementSystem"><i class="bx bx-link-external"></i></a></div>
-            </div>
-            <div class="projects-box">
-                <img src="images/file_scanner.jpg" alt="Malware Detection">
-                <div class="projects-layer"><h4>Malware Scanner</h4><p>Detect threats & generate PDF reports.</p><a href="https://github.com/SilasVerse/File-Malware-Scanner"><i class="bx bx-link-external"></i></a></div>
-            </div>
-            <div class="projects-box">
-                <img src="https://picsum.photos/id/99/500/350" alt="Twitter sentiment">
-                <div class="projects-layer"><h4>Myanllama</h4><p>A chatbot that understands Myanglish.</p><a href="https://github.com/SilasVerse/Myanllama"><i class="bx bx-link-external"></i></a></div>
-            </div>            
-            <div class="projects-box">
-                <img src="https://picsum.photos/id/48/500/350" alt="more">
-                <div class="projects-layer"><h4>+ new project</h4><p>Coming soon</p><a href="#"><i class="bx bx-plus"></i></a></div>
-            </div>
-        </div>
-    </section>
+<!-- Sticky mini-CTA -->
+<a class="mini-cta" id="miniCta" href="#contact" aria-hidden="true">
+  <i class="bx bx-envelope"></i>
+  Get in touch
+</a>
 
-    <!-- contact -->
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <h2 class="heading">Contact <span>Me</span></h2>
-            <div class="contact-wrapper">
-                <div class="contact-slide">
-                    <h4><i class="bx bx-phone"></i> +95 9 *** *** ***</h4>
-                    <h4><i class="bx bx-envelope"></i> silasanderson.rpce@gmail.com</h4>
-                    <h4><i class="bx bxl-github"></i> github.com/SilasVerse</h4>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ───────────── Hero ───────────── -->
+<header class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">
+        <span class="en">Developer &amp; Problem Solver</span>
+        <span class="ja">ポートフォリオ</span>
+      </div>
+      <h1>Turning complex ideas into <span class="accent">clean, impactful solutions.</span></h1>
+      <p class="lede">
+        Hi, I'm Silas — a passionate builder with hands-on experience in software development,
+        data analysis, and automation. I enjoy projects that challenge both creativity and logic,
+        and I'm always exploring the edge of tech.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#projects">View my work</a>
+        <a class="btn btn-secondary" href="#contact">Get in touch</a>
+      </div>
+      <div class="trust-strip">
+        <span><i class="bx bx-code-alt"></i> Full-stack · Python · Java · TS</span>
+        <span><i class="bx bx-cloud"></i> AWS · Serverless</span>
+        <span><i class="bx bx-test-tube"></i> Unit · Integration · UAT</span>
+      </div>
+    </div>
 
-    <footer class="footer">
-        <p>© 2025 Silas – built with curiosity</p>
-    </footer>
-    <script src="js/script.js"></script>
+    <div class="profile-card" aria-label="Profile summary">
+      <div class="avatar-wrap">
+        <img class="avatar" src="https://picsum.photos/id/64/400/400" alt="Silas profile">
+      </div>
+      <div class="p-name">Silas</div>
+      <div class="p-role">Developer · Builder</div>
+      <p class="p-bio">Software development, data analysis, automation, and AI — turning ideas into shipped work.</p>
+      <div class="p-stats">
+        <div class="p-stat">
+          <div class="num">9+</div>
+          <div class="lbl">Projects</div>
+        </div>
+        <div class="p-stat">
+          <div class="num">1+</div>
+          <div class="lbl">Year exp</div>
+        </div>
+        <div class="p-stat">
+          <div class="num">3</div>
+          <div class="lbl">Certificates</div>
+        </div>
+      </div>
+      <div class="social-row">
+        <a href="https://github.com/SilasVerse" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="#" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bx bxl-instagram-alt"></i></a>
+        <a href="mailto:silasanderson.rpce@gmail.com" aria-label="Email"><i class="bx bx-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ───────────── Social proof ───────────── -->
+<section class="logos" aria-label="Tech stack">
+  <div class="wrap logos-inner">
+    <span class="logos-label">Tools &amp; technologies I work with</span>
+    <span class="logo-mark">Python</span>
+    <span class="logo-mark">TypeScript</span>
+    <span class="logo-mark">React</span>
+    <span class="logo-mark">Spring Boot</span>
+    <span class="logo-mark">FastAPI</span>
+    <span class="logo-mark">PostgreSQL</span>
+    <span class="logo-mark">DynamoDB</span>
+    <span class="logo-mark">AWS</span>
+  </div>
+</section>
+
+<!-- ───────────── About / Skills ───────────── -->
+<section class="block skills-section" id="about">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow"><span class="en">About &amp; skills</span><span class="ja">自己紹介とスキル</span></div>
+      <h2>Curiosity, attention to detail, and a bias toward shipping.</h2>
+      <p>I thrive on solving complex problems and turning ideas into impactful solutions. Here's the toolkit I bring to every project.</p>
+    </div>
+
+    <!-- Languages & Frontend -->
+    <div class="skills-category reveal">
+      <div class="skills-category-label"><i class="bx bx-code-alt"></i> Languages &amp; Frontend</div>
+      <div class="skills-grid stagger">
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bxl-python"></i></div>
+          <div class="skill-name">Python</div>
+          <div class="skill-level">Advanced</div>
+          <div class="skill-bar-mini"><span data-width="85"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bxl-typescript"></i></div>
+          <div class="skill-name">TypeScript</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="70"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bxl-javascript"></i></div>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="70"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bxl-react"></i></div>
+          <div class="skill-name">React.js</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="70"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bxl-html5"></i></div>
+          <div class="skill-name">HTML / CSS</div>
+          <div class="skill-level">Advanced</div>
+          <div class="skill-bar-mini"><span data-width="80"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bxl-php"></i></div>
+          <div class="skill-name">PHP</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="50"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend & Databases -->
+    <div class="skills-category reveal">
+      <div class="skills-category-label"><i class="bx bx-server"></i> Backend &amp; Databases</div>
+      <div class="skills-grid stagger">
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bxl-java"></i></div>
+          <div class="skill-name">Java</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="65"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bx-leaf"></i></div>
+          <div class="skill-name">Spring Boot</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="65"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bx-layout"></i></div>
+          <div class="skill-name">Thymeleaf</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="65"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bx-rocket"></i></div>
+          <div class="skill-name">FastAPI</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="70"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bx-data"></i></div>
+          <div class="skill-name">PostgreSQL</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="70"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bx-table"></i></div>
+          <div class="skill-name">DynamoDB</div>
+          <div class="skill-level">Learning</div>
+          <div class="skill-bar-mini"><span data-width="50"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cloud & Tools -->
+    <div class="skills-category reveal">
+      <div class="skills-category-label"><i class="bx bx-cloud"></i> Cloud &amp; Tools</div>
+      <div class="skills-grid stagger">
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bxl-aws"></i></div>
+          <div class="skill-name">AWS Lambda</div>
+          <div class="skill-level">Learning</div>
+          <div class="skill-bar-mini"><span data-width="45"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bx-cloud-upload"></i></div>
+          <div class="skill-name">AWS API Gateway</div>
+          <div class="skill-level">Learning</div>
+          <div class="skill-bar-mini"><span data-width="45"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bx-camera"></i></div>
+          <div class="skill-name">OpenCV</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="70"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bx-cube"></i></div>
+          <div class="skill-name">OpenGL</div>
+          <div class="skill-level">Intermediate</div>
+          <div class="skill-bar-mini"><span data-width="60"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bxl-git"></i></div>
+          <div class="skill-name">Git</div>
+          <div class="skill-level">Advanced</div>
+          <div class="skill-bar-mini"><span data-width="80"></span></div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon"><i class="bx bx-brain"></i></div>
+          <div class="skill-name">Problem Solving</div>
+          <div class="skill-level">Strong</div>
+          <div class="skill-bar-mini"><span data-width="90"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Work Experience ───────────── -->
+<section class="block alt" id="experience">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow"><span class="en">Work experience</span><span class="ja">職務経歴</span></div>
+      <h2>One year of building, shipping, and learning.</h2>
+      <p>Hands-on experience across full-stack development, quality assurance, and technical documentation — with real deliverables and real lessons.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-top">
+            <div>
+              <h3>Junior Software Developer</h3>
+              <div class="company">Japanese IT Company</div>
+            </div>
+            <span class="period"><i class="bx bx-calendar"></i> 2024 — Present</span>
+          </div>
+          <p>
+            Full-stack development in a bilingual (Japanese/English) engineering team. Built and maintained
+            internal web applications using Spring Boot, Thymeleaf, and React, backed by PostgreSQL.
+            Owned the entire testing and documentation lifecycle for multiple features.
+          </p>
+          <ul class="timeline-list">
+            <li><i class="bx bx-check-circle"></i> <span><strong>Unit testing</strong> — wrote and maintained test suites for Java/Spring modules</span></li>
+            <li><i class="bx bx-check-circle"></i> <span><strong>Integration testing</strong> — verified API contracts and database interactions end-to-end</span></li>
+            <li><i class="bx bx-check-circle"></i> <span><strong>UAT testing</strong> — coordinated with stakeholders on user acceptance scenarios</span></li>
+            <li><i class="bx bx-check-circle"></i> <span><strong>User training</strong> — delivered hands-on sessions and authored training materials for internal tools</span></li>
+            <li><i class="bx bx-check-circle"></i> <span><strong>Technical documentation</strong> — wrote design docs, API references, and user manuals in Japanese &amp; English</span></li>
+          </ul>
+          <div class="tags">
+            <span>Spring Boot</span><span>Thymeleaf</span><span>React</span><span>TypeScript</span>
+            <span>PostgreSQL</span><span>FastAPI</span><span>Testing</span><span>Documentation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-top">
+            <div>
+              <h3>Software Development Intern</h3>
+              <div class="company">Digital Innovations Lab</div>
+            </div>
+            <span class="period"><i class="bx bx-calendar"></i> 2023 — 2024</span>
+          </div>
+          <p>
+            Contributed to a library management system and a malware scanner tool. Wrote unit tests,
+            documented APIs, and learned professional Git workflows. First exposure to real production
+            code and agile team processes.
+          </p>
+          <div class="tags">
+            <span>Java</span><span>PHP</span><span>Git</span><span>Testing</span><span>Documentation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tc-top">
+            <div>
+              <h3>Freelance &amp; Personal Projects</h3>
+              <div class="company">Self-employed</div>
+            </div>
+            <span class="period"><i class="bx bx-calendar"></i> 2023 — Present</span>
+          </div>
+          <p>
+            Built personal and client projects spanning computer vision (OpenCV), NLP sentiment analysis,
+            OpenGL simulations, and custom chatbots. Experimented with serverless architecture on AWS
+            (Lambda, API Gateway) and NoSQL with DynamoDB.
+          </p>
+          <div class="tags">
+            <span>OpenCV</span><span>NLP</span><span>OpenGL</span><span>AWS Lambda</span><span>DynamoDB</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Certificates ───────────── -->
+<section class="block" id="certificates">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow"><span class="en">Certificates</span><span class="ja">資格</span></div>
+      <h2>Credentials that back the work.</h2>
+      <p>Formal certifications in Japanese language and IT — the foundation under the projects.</p>
+    </div>
+
+    <div class="cert-grid stagger" id="certGrid">
+      <div class="cert-card">
+        <div class="cert-icon"><i class="bx bx-world"></i></div>
+        <span class="cert-tag">Language</span>
+        <h3>JLPT</h3>
+        <p>Japanese Language Proficiency Test — reading, grammar, and vocabulary across levels. Certified proficiency for professional communication.</p>
+        <span class="cert-meta"><i class="bx bx-check-shield"></i> Verified credential</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="bx bx-chip"></i></div>
+        <span class="cert-tag">IT Certification</span>
+        <h3>IP</h3>
+        <p>IT Passport — foundational IT knowledge spanning hardware, software, networks, and databases. The entry certification for IT professionals in Japan.</p>
+        <span class="cert-meta"><i class="bx bx-check-shield"></i> Verified credential</span>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon"><i class="bx bx-certification"></i></div>
+        <span class="cert-tag">IT Certification</span>
+        <h3>FE</h3>
+        <p>Fundamental Information Technology Engineer — algorithms, databases, system design, and project management. A nationally recognized IT qualification.</p>
+        <span class="cert-meta"><i class="bx bx-check-shield"></i> Verified credential</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Projects ───────────── -->
+<section class="block alt" id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow"><span class="en">Latest projects</span><span class="ja">プロジェクト</span></div>
+      <h2>Things I've built, shipped, and learned from.</h2>
+      <p>A mix of simulations, automation, NLP, and full systems — each one a chance to go deeper.</p>
+    </div>
+
+    <div class="projects-grid stagger" id="projectsGrid">
+      <a class="project-card" href="https://github.com/SilasVerse/Aquatopia" target="_blank" rel="noopener">
+        <img src="images/Aqua.jpg" alt="Aquatopia">
+        <div class="project-layer">
+          <h4>Aquatopia</h4>
+          <p>OpenGL fish simulation with dynamic underwater motion.</p>
+          <span class="project-link"><i class="bx bx-link-external"></i> View project</span>
+        </div>
+      </a>
+      <a class="project-card" href="https://github.com/SilasVerse/BGR" target="_blank" rel="noopener">
+        <img src="images/BGR.jpg" alt="Background Remover">
+        <div class="project-layer">
+          <h4>Bg Remover</h4>
+          <p>Remove &amp; detect objects using OpenCV.</p>
+          <span class="project-link"><i class="bx bx-link-external"></i> View project</span>
+        </div>
+      </a>
+      <a class="project-card" href="https://github.com/SilasVerse/AAA-Automated-Automobile-Analysis" target="_blank" rel="noopener">
+        <img src="images/Car-sideview.jpg" alt="Auto Analysis">
+        <div class="project-layer">
+          <h4>Automobile Analysis</h4>
+          <p>RPA data extraction + visualization.</p>
+          <span class="project-link"><i class="bx bx-link-external"></i> View project</span>
+        </div>
+      </a>
+      <a class="project-card" href="#">
+        <img src="https://picsum.photos/id/99/500/350" alt="Payroll System">
+        <div class="project-layer">
+          <h4>Payroll System</h4>
+          <p>Automated payroll processing with tax calculations.</p>
+          <span class="project-link"><i class="bx bx-link-external"></i> View project</span>
+        </div>
+      </a>
+      <a class="project-card" href="https://github.com/SilasVerse/Twitter-Sentiment-Analysis-Upgrade" target="_blank" rel="noopener">
+        <img src="images/tweet.jpg" alt="Twitter sentiment">
+        <div class="project-layer">
+          <h4>Sentiment Analysis</h4>
+          <p>NLP tweet classification.</p>
+          <span class="project-link"><i class="bx bx-link-external"></i> View project</span>
+        </div>
+      </a>
+      <a class="project-card" href="https://github.com/SilasVerse/LibraryManagementSystem" target="_blank" rel="noopener">
+        <img src="images/Library.jpg" alt="Library Management">
+        <div class="project-layer">
+          <h4>Library Management System</h4>
+          <p>A simple LMS, but with old legacy language.</p>
+          <span class="project-link"><i class="bx bx-link-external"></i> View project</span>
+        </div>
+      </a>
+      <a class="project-card" href="https://github.com/SilasVerse/File-Malware-Scanner" target="_blank" rel="noopener">
+        <img src="images/file_scanner.jpg" alt="Malware Detection">
+        <div class="project-layer">
+          <h4>Malware Scanner</h4>
+          <p>Detect threats &amp; generate PDF reports.</p>
+          <span class="project-link"><i class="bx bx-link-external"></i> View project</span>
+        </div>
+      </a>
+      <a class="project-card" href="https://github.com/SilasVerse/Myanllama" target="_blank" rel="noopener">
+        <img src="https://picsum.photos/id/99/500/350" alt="Myanllama">
+        <div class="project-layer">
+          <h4>Myanllama</h4>
+          <p>A chatbot that understands Myanglish.</p>
+          <span class="project-link"><i class="bx bx-link-external"></i> View project</span>
+        </div>
+      </a>
+      <a class="project-card" href="#contact">
+        <img src="https://picsum.photos/id/48/500/350" alt="New project">
+        <div class="project-layer">
+          <h4>+ New project</h4>
+          <p>Coming soon — always building.</p>
+          <span class="project-link"><i class="bx bx-plus"></i> In progress</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── Contact ───────────── -->
+<section class="cta-band" id="contact">
+  <div class="wrap reveal">
+    <div class="eyebrow" style="justify-content:center"><span class="en">Get in touch</span><span class="ja">お問い合わせ</span></div>
+    <h2>Let's build something together.</h2>
+    <p>Whether it's a new project, a collaboration, or just a question — my inbox is always open.</p>
+
+    <div class="contact-grid stagger" id="contactGrid">
+      <div class="contact-card">
+        <div class="icon-circle"><i class="bx bx-phone"></i></div>
+        <h4>Phone</h4>
+        <span>+95 9 *** *** ***</span>
+      </div>
+      <div class="contact-card">
+        <div class="icon-circle"><i class="bx bx-envelope"></i></div>
+        <h4>Email</h4>
+        <a href="mailto:silasanderson.rpce@gmail.com">silasanderson.rpce@gmail.com</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon-circle"><i class="bx bxl-github"></i></div>
+        <h4>GitHub</h4>
+        <a href="https://github.com/SilasVerse" target="_blank" rel="noopener">github.com/SilasVerse</a>
+      </div>
+    </div>
+
+    <div class="cta-row" style="margin-top:32px">
+      <a class="btn btn-primary" href="mailto:silasanderson.rpce@gmail.com">Send me an email</a>
+      <a class="btn btn-secondary" href="https://github.com/SilasVerse" target="_blank" rel="noopener">Browse GitHub</a>
+    </div>
+    <p class="fine">Open to freelance, collaboration, and full-time opportunities.</p>
+  </div>
+</section>
+
+<!-- ───────────── Footer ───────────── -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo-lockup">
+          <span class="logo-mark">S</span>
+          <div>
+            <span class="name">Silas.</span>
+            <span class="by">Developer portfolio</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4>Portfolio</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://github.com/SilasVerse" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="mailto:silasanderson.rpce@gmail.com">Email</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:silasanderson.rpce@gmail.com">silasanderson.rpce@gmail.com</a></li>
+          <li><a href="#contact">Get in touch</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="copy">© 2025 Silas — built with curiosity.</span>
+      <span class="copy">Designed with a clean, modern aesthetic.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
