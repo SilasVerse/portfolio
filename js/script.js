@@ -9,6 +9,24 @@
     root.classList.add('js-reveal-ready');
   }
 
+  /* ── Update avatar background based on theme ── */
+  function updateAvatarTheme(isDark) {
+    var avatar = document.querySelector('.profile-card .avatar');
+    if (!avatar) return;
+    var base = 'https://api.dicebear.com/7.x/avataaars/svg?seed=Silas'
+      + '&top=shortFlat'
+      + '&hairColor=1c1c1c'
+      + '&skinColor=f8d25c'
+      + '&accessories=prescription02'
+      + '&accessoriesProbability=100'
+      + '&facialHairProbability=0'
+      + '&clothing=hoodie'
+      + '&clothingColor=3c4f5c'
+      + '&eyes=default'
+      + '&mouth=smile';
+    avatar.src = base + '&backgroundColor=' + (isDark ? '0f2233' : 'E6F4FF');
+  }
+
   /* ── Scroll progress bar ── */
   (function () {
     var bar = document.getElementById('progressBar');
@@ -77,10 +95,12 @@
       body.classList.remove('dark-mode');
       icon.classList.remove('bx-sun');
       icon.classList.add('bx-moon');
+      updateAvatarTheme(false);
     } else {
       body.classList.add('dark-mode');
       icon.classList.remove('bx-moon');
       icon.classList.add('bx-sun');
+      updateAvatarTheme(true);
     }
 
     toggle.addEventListener('click', function () {
@@ -92,6 +112,7 @@
         icon.classList.remove('bx-sun');
         icon.classList.add('bx-moon');
       }
+      updateAvatarTheme(isDark);
       try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) {}
     });
   })();
